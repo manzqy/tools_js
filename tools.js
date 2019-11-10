@@ -23,6 +23,16 @@ jTools.randomHexColor = function() {
     var b = jTools.randomInt(0,255).toString(16);
     return "#"+ r + g + b;
 }
+/* == */
+/* ========== stopPropagation */
+jTools.stopPropagation = function(e) {
+    e = e || window.event;
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    } else {
+        e.cancelBubble = true; //IE 兼容
+    }
+}
 
 
 
