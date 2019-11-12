@@ -7,7 +7,7 @@ var jTools = {};
 jTools.randomInt = function(n, m) {
     n = n || 0;
     m = m || 1;
-    return Math.floor(Math.random() * (m - n + 1));
+    return Math.floor(Math.random() * (m - n + 1) + n);
 }
 /* ========== randomRGB */
 jTools.randomRGB = function() {
