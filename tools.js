@@ -33,6 +33,15 @@ jTools.stopPropagation = function(e) {
         e.cancelBubble = true; //IE 兼容
     }
 }
-
+/* ========== localStorageSet */
+jTools.setData = function(arr) {
+    localStorage.setItem("info",JSON.stringify(arr));
+}
+/* ========== localStorageGet */
+jTools.getData = function() {
+    let data = localStorage.getItem("info");
+    data = JSON.parse(data);
+    return data || [];
+}
 
 
